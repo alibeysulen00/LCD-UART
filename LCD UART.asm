@@ -1,37 +1,34 @@
-;KODLAMA SABLONU
 
-	list		p=16f877A	; hangi pic
-	#include	<p16f877A.inc>	; SFR register 'lar?n tan?mland??? kutuphane
+
+	list		p=16f877A	
+	#include	<p16f877A.inc>	
 	
     __CONFIG H'3F31'
 
-; BU UYGULAMADA HER RC2 KESMESINDE (CAPTURE) TMR1 DEGERI EKRANA YAZILIYOR
 
 	
-;KULLANILACAK DEGISKENLER
 
 
 SAYAC	EQU	0X23
 SAYAC2		EQU	0X24
 
 DEGER	EQU	0X25
-TMP		EQU	0x31	; GECICI ISLER ICIN
+TMP		EQU	0x31	
 
 
 
 
 
 
-;*** Kesme durumunda kaydedilmesi gereken SFR ler icin kullanilacak yardimci degiskenler
 w_temp		EQU	0x7D		
 status_temp	EQU	0x7E		
 pclath_temp	EQU	0x7F					
 
 
 ;********************************
-    ORG     0x000             	; Baslama vektoru
+    ORG     0x000             
 
-    nop			  			  	; ICD ozelliginin aktif edilmesi icin gereken bekleme 
+    nop			  			  	
     goto    BASLA              	
 
 	
